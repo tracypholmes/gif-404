@@ -1,0 +1,90 @@
+main, footer {
+  font-family: 'Raleway', serif;
+  text-align: center;
+  max-width: 1900px;
+  margin: 0 auto;
+  flex-direction: column;
+  background: cornflowerblue;
+}
+
+.header {
+  text-align: center;
+  background: moccasin;
+  font-size: 2em;
+  text-shadow: 4px 4px 4px grey;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+article{
+  flex-basis: 100%;
+}
+
+footer {
+  background: lightgreen;
+}
+
+
+@media screen and (min-width: 800px) {
+  article {
+    flex: 10;
+  }
+
+
+/* Too narrow to support three columns */
+  @media all and (min-width: 316px) and (max-width: 640px) {
+      main {
+          flex-direction: column;
+      }
+
+      article, nav, p, aside, header {
+      /* Return them to document order */
+          order: 0;
+      }
+
+      nav, aside, p, header, footer {
+          min-height: 50px;
+          max-height: 50px;
+      }
+    }
+
+
+/*
+  .flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+
+  }
+
+  .flex-container > * {
+    padding: 10px;
+    flex:  100%;
+  }
+
+  .main {
+    text-align: center;
+    background: cornflowerblue;
+  }
+
+  .header {background: moccasin;
+    font-size: 2em;
+    text-shadow: 4px 4px 4px grey;
+    min-height: 60px;
+  }
+
+
+
+ @media all and (min-width: 800px) {
+    .main    { flex: 3 10px; }
+    .main    { order: 1; }
+    .footer  { order: 2; }
+  }
+*/
