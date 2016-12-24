@@ -16,13 +16,16 @@ main, footer {
 
 section {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
-article{
-  flex-basis: 100%;
+article, img {
+  float: left;
+  width: 100%;
+  height: inherit;;
 }
+
 
 footer {
   background: lightgreen;
@@ -31,60 +34,23 @@ footer {
 
 @media screen and (min-width: 800px) {
   article {
-    flex: 10;
+    justify-self: stretch;
   }
 
 
 /* Too narrow to support three columns */
-  @media all and (min-width: 316px) and (max-width: 640px) {
+  @media all and (max-width: 640px) {
       main {
           flex-direction: column;
       }
 
-      article, nav, p, aside, header {
+      article, nav, header {
       /* Return them to document order */
           order: 0;
       }
 
-      nav, aside, p, header, footer {
+      nav, header, footer {
           min-height: 50px;
           max-height: 50px;
       }
     }
-
-
-/*
-  .flex-container {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-    font-weight: bold;
-    text-align: center;
-
-  }
-
-  .flex-container > * {
-    padding: 10px;
-    flex:  100%;
-  }
-
-  .main {
-    text-align: center;
-    background: cornflowerblue;
-  }
-
-  .header {background: moccasin;
-    font-size: 2em;
-    text-shadow: 4px 4px 4px grey;
-    min-height: 60px;
-  }
-
-
-
- @media all and (min-width: 800px) {
-    .main    { flex: 3 10px; }
-    .main    { order: 1; }
-    .footer  { order: 2; }
-  }
-*/

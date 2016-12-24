@@ -2,7 +2,7 @@
 // usage:
 //   include giphy.js in your <head>
 //   set q to your search term (e.g. "brunch")
-//   add <span id = "giphyme"></span> wherever you want to display the image. -- FYI, it will be centered.
+//   add <span id = "giphyme"></span> wherever you want to display the image. -- FYI, it will be righted.
 // big ups to the Giphy crew (giphy.com)
 // 2014 - Neal Shyam [@nealrs | nealshyam.com]
 
